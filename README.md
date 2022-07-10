@@ -12,8 +12,9 @@ This script takes a text file of CpG IDs
 for example I added the file Up_Control.sort.txt
 you can run the following command in terminal: 
 ``` bash
-python .\Id_to_bed.py .\Up_Control.sort.txt
+python .\Id_to_bed.py .\Up_Control.sort.txt 200
 ```
+format python .\Id_to_bed.py "FILENAME" "number of nucleotides to add in each direction"
 
 # Output:
 for a file of CpGs Ids you'll get a bed file with the usual columns:
