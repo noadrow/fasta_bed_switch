@@ -15,12 +15,12 @@ you can run the following command in terminal:
 python .\Id_to_bed.py .\Up_Control.sort.txt
 ```
 
-# output:
+# Output:
 for a file of CpGs Ids you'll get a bed file with the usual columns:
 chromosome, start position, end position 
 and additional column for the IDs
 
-#NOTE:
+# NOTE:
 now you can use bedtools to get also a fasta file out:
 ``` bash
 bedtools getfasta -fi hg38.fa -bed Control_pos.bed
