@@ -21,7 +21,8 @@ chromosome, start position, end position
 and additional column for the IDs
 
 # NOTE:
-now you can use bedtools to get also a fasta file out:
+using the created bed file now you can also create a fasta file:
+
 ``` bash
 bedtools getfasta -fi hg38.fa -bed Control_pos.bed
 ```
