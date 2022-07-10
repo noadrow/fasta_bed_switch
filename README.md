@@ -27,3 +27,14 @@ using the created bed file now you can also create a fasta file:
 ``` bash
 bedtools getfasta -fi hg38.fa -bed Control_pos.bed
 ```
+
+Another possibal work-flow is to start with a fasta file and convert it to bed file 
+``` bash
+python .\fasta_record_to_bed.py .\Control_400_hg38.fa 
+```
+This script will return the record names of the fasta file to bed, then you can intersect them with the file infinium.bed
+that containes all infinium illumina CpG sites 
+
+``` bash
+bedtools intersect -a Control_400_hg38.bed -b illumina.bed
+```
