@@ -32,9 +32,12 @@ Another possibal work-flow is to start with a fasta file and convert it to bed f
 ``` bash
 python .\fasta_record_to_bed.py .\Control_400_hg38.fa 
 ```
-This script will return the record names of the fasta file to bed, then you can intersect them with the file infinium.bed
-that containes all infinium illumina CpG sites 
+This script will return the record names of the fasta file as bed
+
+Then you can intersect them with the file infinium.bed
+that containes all infinium illumina CpG sites following cut for the 4th column if you wish to collect only the CpGs sites that were on the original fasta file
 
 ``` bash
-bedtools intersect -a Control_400_hg38.bed -b illumina.bed
+bedtools intersect -a Control_400_hg38.bed -b illumina.bed | cut -f4 > new.bed 
+
 ```
